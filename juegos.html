@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+
+<head>
+  <!-- Datos que describen el documento -->
+  <meta charset="UTF-8" />
+  <title>LaVuelta2026:Juegos</title>
+  <link rel="Icon" href="multimedia/favicon.ico" />
+
+  <meta name="author" content="Charlotte Antonella Gil Henriquez" />
+  <meta name="description" content="documento juegos" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--Enlace a las hojas de estilo-->
+  <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+  <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+</head>
+
+<body>
+  <!-- contenido de juegos.html  -->
+  <header>
+    <h1>
+      <a href="index.html" title="Ir al Inicio de la paguina">LaVuelta2026</a>
+    </h1>
+
+    <nav>
+      <a href="index.html" title="Ir al inicio de La Vuelta 2026">Inicio</a>
+      <a href="ciclista.html" title="Ir al ciclista">Ciclista</a>
+      <a href="equipo.html" title="Ir al equipo">Equipo</a>
+      <a href="etapa.html" title="Ir a la etapa">Etapa</a>
+      <a href="meteorologia.html" title="Ir a la meteorología">Meteorología</a>
+      <a href="clasificaciones.html" title="Ir a las clacificaciones">Clasificaciones</a>
+      <a href="juegos.html" title="Ir a los juegos" aria-current="page">Juegos</a>
+      <a href="ayuda.html" title="Ir a la ayuda">Ayuda</a>
+    </nav>
+  </header>
+  <nav aria-label="migas">
+    <ol>
+      <li><a href="index.html">Inicio</a></li>
+      <li> >> </li>
+      <li>Juegos</li>
+    </ol>
+  </nav>
+
+  <main>
+    <h2>
+      Juegos
+    </h2>
+    <h3>
+      ¿Conoces la etapa?
+    </h3>
+    <p>
+      Responde 10 preguntas sobre la etapa para averiguarlo.
+    </p>
+    <form>
+  <fieldset>
+    <legend>Almuñécar a Loja</legend>
+    
+    <div>
+      <label for="etapa">1 - ¿Cuál es el número de la etapa? Introduce el número (1-21):</label>
+      <input type="number" id="etapa" name="etapa" min="1" max="21" required>
+    </div>
+
+    <div>
+      <label for="fecha-etapa"> 2 - ¿Cuando se celebro la Etapa?:</label>
+      <input type="date" id="fecha-etapa" name="fecha-etapa" min="2026-01-01" max="2026-12-31" required>
+    </div>
+
+    <div>
+      <label for="ciudad-salida"> 3 - ¿Donde tuvo lugar la salida de la Etapa?:</label>
+      <select id="ciudad-salida" name="ciudad-salida" required>
+        <option value="" selected disabled>Seleccione una opción</option>
+        <option value="Mónaco">Mónaco</option>
+        <!-- ... tus otras opciones ... -->
+        <option value="Carrefour Granada">Puçol</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="ciudad-meta"> 4 - ¿Donde tuvo lugar la meta de la Etapa?:</label>
+      <select id="ciudad-meta" name="ciudad-meta" required>
+        <option value="" selected disabled>Seleccione una opción</option>
+        <option value="Mónaco">Mónaco</option>
+        <!-- ... tus otras opciones ... -->
+        <option value="Granada">Granada</option>
+      </select>
+    </div>
+
+    <fieldset class="bloque-radio-botones">
+      <legend>5 - ¿El tipo de la Etapa?</legend>
+      <div>
+        <input type="radio" id="tipo-llana" name="tipo_etapa" value="llana">
+        <label for="tipo-llana">Llana</label>
+      </div>
+      <div>
+        <input type="radio" id="tipo-media-montaña" name="tipo_etapa" value="media_montaña">
+        <label for="tipo-media-montaña">Media montaña</label>
+      </div>
+      <div>
+        <input type="radio" id="tipo-montaña" name="tipo_etapa" value="montaña">
+        <label for="tipo-montaña">Montaña</label>
+      </div>
+      <div>
+        <input type="radio" id="tipo-cri" name="tipo_etapa" value="contrarreloj_individual">
+        <label for="tipo-cri">Contrarreloj individual</label>
+      </div>
+      <div>
+        <input type="radio" id="tipo-cre" name="tipo_etapa" value="contrarreloj_por_equipos">
+        <label for="tipo-cre">Contrarreloj por equipos</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="bloque-check-botones">
+      <legend>6 - ¿Que hitos estubieron presentes en la Etapa?</legend>
+      <div>
+        <input type="checkbox" id="hito-puerto" name="hitos" value="puerto_montaña">
+        <label for="hito-puerto">Puerto de montaña</label>
+      </div>
+      <div>
+        <input type="checkbox" id="hito-especial" name="hitos" value="categoria_especial">
+        <label for="hito-especial">Puerto categoría especial</label>
+      </div>
+      <div>
+        <input type="checkbox" id="hito-sprint-int" name="hitos" value="sprint_intermedio">
+        <label for="hito-sprint-int">Sprint intermedio</label>
+      </div>
+      <div>
+        <input type="checkbox" id="hito-sprint-bon" name="hitos" value="sprint_bonificado">
+        <label for="hito-sprint-bon">Sprint bonificado</label>
+      </div>
+      <div>
+        <input type="checkbox" id="hito-sin" name="hitos" value="sin_hitos">
+        <label for="hito-sin">Sin hitos</label>
+      </div>
+    </fieldset>
+
+    <div>
+      <label for="dificultad-etapa"> 7 - ¿Cual es la dificultad de la Etapa? (1 al 10):</label>
+      <input type="range" id="dificultad-etapa" name="dificultad" min="1" max="10" step="1" value="5">
+    </div>
+
+    <div>
+      <label for="longitud-etapa"> 8 - ¿Cual es la longitud de la Etapa? (en km):</label>
+      <input type="number" id="longitud-etapa" name="longitud" min="0" step="0.1" required>
+    </div>
+
+    <div>
+      <label for="desnivel-etapa"> 9 - ¿Cual es el desnivel de la Etapa? (en metros):</label>
+      <input type="number" id="desnivel-etapa" name="desnivel" min="0" step="1" required>
+    </div>
+
+    <div>
+      <label for="descripcion-etapa"> 10 - ¿Cual es descripción de la Etapa?:</label>
+      <textarea id="descripcion-etapa" name="descripcion" rows="4" cols="50" required></textarea>
+    </div>
+
+    <div>
+      <label for="nombre-participant">e - ¿Cuál es el nombre del participante?:</label>
+      <input type="text" id="nombre-participant" name="descripcion" required>
+    </div>
+
+    <button type="submit">Enviar respuestas</button>
+
+  </fieldset>
+</form>
+
+
+  </main>
+
+
+  <footer>
+    <p>Charlotte A. Gil Henriquez</p>
+    <address><a href="mailto:uo308964@uniovi.es">uo308964@uniovi.es</a></address>
+
+  </footer>
+</body>
+
+</html>

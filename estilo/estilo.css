@@ -1,0 +1,103 @@
+/* *****************************************************/
+/*                    LaVuelta2026                     */
+/*                  Estilos generales                  */
+/* *****************************************************/
+/*                  DATOS ESTUDIANTE                   */
+/* ----------------------------------------------------*/
+/*  Nombre y Apellidos: Charlotte A. Gil Henriquez     */
+/*  Correo electrónico (uniovi): uo308964@uniovi.es    */
+/*  Grupo de laboratorio: L.4                          */
+/* *****************************************************/
+
+
+/*   GAMA CROMATICA
+Color principal Turquesa oscuro #005249 se puede combinar con:
+    Color secundario - Contraste de 7.99:1 (AAA)
+    Color blanco - Contraste de 9.11:1 (AAA)
+
+Color secundario Turquesa claro # ADFFF7 se puede combinar con:
+    Color principal - Contraste de 7.99:1 (AAA)
+    Color negro - Contraste de 18.42:1 (AAA)
+
+Color Blanco #FFFFFF
+Color Negro #000000
+*/
+
+/* Especificidad: 010 */
+:root {
+    --color-principal: #005C53; /* Turquesa oscuro (Texto/Fondos AAA con blanco) */
+    --color-secundario: #ADFFF7; /* Turquesa medio (Acentos, compatible con negro AAA) */
+    --blanco: #FFFFFF;
+    --negro: #000000;
+}
+/* Especificidad: 001 */
+body {
+    background: var(--blanco);
+    color: var(--negro);
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+
+
+/* Especificidad: 001, 001 */
+header, footer {
+    background-color: var(--color-principal);
+    color: var(--blanco);
+}
+
+/* Especificidad: 002, 002 */
+header a, footer a{
+    color: var(--color-secundario); /* ADVERTENCIA: color de fondo heredado de header y footer --color-principal */
+    text-decoration-line: none;
+}
+/* Especificidad: 011 */
+nav a[aria-current="page"] {
+    font-weight: bold;
+    color: var(--blanco); /* ADVERTENCIA: color de fondo heredado de header y footer --color-principal */
+    text-decoration-line: none;
+}
+/* Especificidad: 003 */
+header + nav > ol {
+    list-style: none;
+    font-size: 0.8em;
+}
+
+/* Especificidad: 004 */
+header + nav > ol > li {
+    display: inline;
+}
+
+/* Especificidad: 014 */
+header + nav > ol > li:last-child {
+    font-weight: bold;
+}
+
+/* Especificidad: 013 */
+section:has(picture) > ul > :first-child{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Especificidad: 013 */
+section:has(picture) > ul > :nth-child(2){
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+/* Especificidad: 013 */
+section:has(picture) > ul > :nth-child(3){
+    font-weight: bold;
+}
+
+/* Especificidad: 010 */
+th[scope="col"]{
+background-color:var(--color-principal);
+color: var(--blanco);
+}
+
+/* Especificidad: 111, 111, 111 */
+tr:has(th#Posicion-General),
+tr:has(th#Visctorias-General),
+tr:has(th#Maillots) {
+    background-color: var(--color-secundario); /* ADVERTENCIA: color de fondo las letras de header y footer --negro */
+}

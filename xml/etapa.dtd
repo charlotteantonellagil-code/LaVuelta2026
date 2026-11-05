@@ -1,0 +1,78 @@
+<!ELEMENT etapa (nombre, numero_etapa, longitud, fecha, tiempo, velocidad, desnivel, tipo_etapa, referencias, galeria_de_fotografias, galeria_de_videos, galeria_de_sonidos, salida, meta, hitos, puntos_anonimos, clasificaciones)><!ELEMENT nombre (#PCDATA)>
+<!ELEMENT numero_etapa (#PCDATA)>
+
+<!ELEMENT longitud (#PCDATA)>
+<!ATTLIST longitud unidades CDATA #REQUIRED>
+
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT tiempo (#PCDATA)>
+
+<!ELEMENT velocidad (#PCDATA)>
+<!ATTLIST velocidad unidades  CDATA #REQUIRED>
+
+<!ELEMENT desnivel (#PCDATA)>
+<!ATTLIST desnivel unidades  CDATA #REQUIRED>
+
+<!ELEMENT tipo_etapa (#PCDATA)>
+<!ELEMENT referencias (referencia+)>
+<!ELEMENT referencia (#PCDATA)>
+
+<!ELEMENT galeria_de_fotografias (fotografia+)>
+<!ELEMENT fotografia (#PCDATA)>
+
+<!ELEMENT galeria_de_videos (video+)>
+<!ELEMENT video (#PCDATA)>
+
+<!ELEMENT galeria_de_sonidos (sonido+)>
+<!ELEMENT sonido (#PCDATA)>
+
+<!ELEMENT salida (ciudad, longitud, latitud, altitud)>
+<!ELEMENT meta (ciudad, longitud, latitud, altitud)>
+
+
+<!ELEMENT ciudad (#PCDATA)>
+
+<!ELEMENT latitud (#PCDATA)>
+<!ATTLIST latitud unidades  CDATA #REQUIRED>
+<!ELEMENT altitud (#PCDATA)>
+<!ATTLIST altitud unidades  CDATA #REQUIRED>
+
+
+<!ELEMENT hitos (hito*)>
+<!ELEMENT hito (longitud, latitud, altitud, distancia)>
+
+<!ELEMENT distancia (#PCDATA)>
+<!ATTLIST distancia unidades CDATA #REQUIRED>
+
+
+<!ELEMENT puntos_anonimos (punto*)>
+<!ELEMENT punto (nombre?,longitud, latitud, altitud, distancia)>
+
+<!ELEMENT clasificaciones (clasificacion_etapa, clasificacion_general, clasificacion_equipos)>
+
+<!-- 1. CLASIFICACIÓN DE LA ETAPA -->
+<!ELEMENT clasificacion_etapa (ganador_etapa, segundo_etapa, tercero_etapa)>
+<!ELEMENT ganador_etapa (#PCDATA)>
+<!ELEMENT segundo_etapa (#PCDATA)>
+<!ELEMENT tercero_etapa (#PCDATA)>
+
+<!ATTLIST segundo_etapa diferencia CDATA #REQUIRED>
+<!ATTLIST tercero_etapa diferencia CDATA #REQUIRED>
+
+<!-- 2. CLASIFICACIÓN GENERAL -->
+<!ELEMENT clasificacion_general (lider_general, segundo_general, tercero_general)>
+<!ELEMENT lider_general (#PCDATA)>
+<!ELEMENT segundo_general (#PCDATA)>
+<!ELEMENT tercero_general (#PCDATA)>
+
+<!ATTLIST segundo_general diferencia CDATA #REQUIRED>
+<!ATTLIST tercero_general diferencia CDATA #REQUIRED>
+
+<!-- 3. CLASIFICACIÓN POR EQUIPOS -->
+<!ELEMENT clasificacion_equipos (primero_equipo, segundo_equipo, tercero_equipo)>
+<!ELEMENT primero_equipo (#PCDATA)>
+<!ELEMENT segundo_equipo (#PCDATA)>
+<!ELEMENT tercero_equipo (#PCDATA)>
+
+<!ATTLIST segundo_equipo diferencia CDATA #REQUIRED>
+<!ATTLIST tercero_equipo diferencia CDATA #REQUIRED>

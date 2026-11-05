@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE etapa SYSTEM "etapa.dtd">
+<etapa>
+    <nombre>Almuñécar a Loja</nombre>
+    <numero_etapa>13</numero_etapa>
+    
+    <longitud unidades="km">162</longitud>
+    <fecha>2026-09-17</fecha>
+    <tiempo>04:15:30</tiempo>
+    
+    <velocidad unidades="km/h">38.1</velocidad>
+    <desnivel unidades="m">2400</desnivel>
+    <tipo_etapa>Media Montaña</tipo_etapa>
+    
+    <referencias>
+        <referencia>https://lavuelta.es</referencia>
+        <referencia>https://esciclismo.com</referencia>
+        <referencia>https://marca.com</referencia>
+    </referencias>
+    
+    <galeria_de_fotografias>
+        <fotografia>vuelta2026-13erEtapa.jpg</fotografia>
+    </galeria_de_fotografias>
+    
+    <galeria_de_videos>
+        <video>LaPelicula_Etapa13_LaVuelta26.mp4</video>
+    </galeria_de_videos>
+    
+    <galeria_de_sonidos>
+        <sonido>AlmunecarAcojeLaSalidaDeLaEtapa13.mp3</sonido>
+    </galeria_de_sonidos>
+    
+<salida>
+        <ciudad>Almuñécar</ciudad>
+        <longitud unidades="grados">-3.6911</longitud>
+        <latitud unidades="grados">36.7333</latitud>
+        <altitud unidades="m">24</altitud>
+    </salida>
+    
+    <meta>
+        <ciudad>Loja</ciudad>
+        <longitud unidades="grados">-4.1500</longitud>
+        <latitud unidades="grados">37.1667</latitud>
+        <altitud unidades="m">485</altitud>
+    </meta>
+    <hitos>
+        <hito>
+            <longitud unidades="grados">-3.8000</longitud>
+            <latitud unidades="grados">36.9000</latitud>
+            <altitud unidades="m">850</altitud>
+            <distancia unidades="km">75</distancia>
+        </hito>
+    </hitos>
+    
+    <puntos_anonimos>
+        <punto>
+            <nombre>Puerto de Almijara</nombre>
+            <longitud unidades="grados">-3.8500</longitud>
+            <latitud unidades="grados">36.9500</latitud>
+            <altitud unidades="m">1200</altitud>
+            <distancia unidades="km">92</distancia>
+        </punto>
+    </puntos_anonimos>
+    
+    <clasificaciones>
+        <clasificacion_etapa>
+            <ganador_etapa>Carlos Rodríguez</ganador_etapa>
+            <segundo_etapa diferencia="00:00:12">Enric Mas</segundo_etapa>
+            <tercero_etapa diferencia="00:00:34">Mikel Landa</tercero_etapa>
+        </clasificacion_etapa>
+        
+        <clasificacion_general>
+            <lider_general>Juan Ayuso</lider_general>
+            <segundo_general diferencia="00:00:45">Carlos Rodríguez</segundo_general>
+            <tercero_general diferencia="00:01:15">Enric Mas</tercero_general>
+        </clasificacion_general>
+        
+        <clasificacion_equipos>
+            <primero_equipo>Movistar Team</primero_equipo>
+            <segundo_equipo diferencia="00:02:10">INEOS Grenadiers</segundo_equipo>
+            <tercero_equipo diferencia="00:05:40">UAE Team Emirates</tercero_equipo>
+        </clasificacion_equipos>
+    </clasificaciones>
+</etapa>

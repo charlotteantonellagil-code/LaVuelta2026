@@ -1,0 +1,198 @@
+/* *****************************************************/
+/*                    LaVuelta2026                     */
+/*                  Estilos generales                  */
+/* *****************************************************/
+/*                  DATOS ESTUDIANTE                   */
+/* ----------------------------------------------------*/
+/*  Nombre y Apellidos: Charlotte A. Gil Henriquez     */
+/*  Correo electrónico (uniovi): uo308964@uniovi.es    */
+/*  Grupo de laboratorio: L.4                          */
+/* *****************************************************/
+
+/* Especificidad 012 */
+section:has(picture) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Especificidad 013 */
+section:has(picture)>h3 {
+    flex-basis: 100%;
+}
+
+/* Especificidad 013 */
+section:has(picture)>picture {
+    order: 2;
+}
+
+/* Especificidad 013 */
+section:has(picture)>ul {
+    order: 3;
+    list-style: none;
+}
+
+
+/* Especificidad 012 */
+section:has(video) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Especificidad 012 */
+section:has(article) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+/* Especificidad 013 */
+section:has(article)>h3 {
+    grid-column: 1/-1;
+}
+
+/* Especificidad 001 */
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "cabecera"
+        "migas"
+        "contenido"
+        "pie";
+    grid-template-rows: auto auto 1fr auto;
+    margin: 0;
+}
+
+/* Especificidad 001 */
+header {
+    grid-area: cabecera;
+}
+
+/* Especificidad 002 */
+header+nav {
+    grid-area: migas;
+}
+
+/* Especificidad 001 */
+main {
+    grid-area: contenido;
+}
+
+/* Especificidad 001 */
+footer {
+    grid-area: pie;
+}
+
+/* Especificidad 001 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Especificidad 001 */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    /* Especificidad 012 */
+    section:has(article) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Especificidad 001 */
+    header {
+        flex-direction: column;
+    }
+
+    /* Especificidad 002 */
+    header nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    /* Especificidad 011 */
+    nav[aria-label="migas"] {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+
+        /* Especificidad 012 */
+        section:has(article) {
+            grid-template-columns: 1fr;
+        }
+
+        /* Especificidad 001 */
+        header {
+            flex-direction: column;
+        }
+
+        /* Especificidad 002 */
+        header nav {
+            flex-direction: column;
+        }
+
+        /* Especificidad 011 */
+        nav[aria-label="migas"] {
+            display: none;
+        }
+    }
+}
+
+/*Especificidad: 001*/
+form{
+    display: flex;
+    flex-direction: column;
+  width: 100%;
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+/*Especificidad: 002*/
+form > fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/*Especificidad: 002*/
+fieldset > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+ 
+/*Especificidad: 012*/
+form > fieldset .bloque-radio-botones,
+form > fieldset .bloque-check-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*Especificidad: 013*/
+fieldset .bloque-radio-botones > div,
+fieldset .bloque-check-botones > div {
+  flex-direction: row;
+  gap: 0.6rem;
+}
+
+/*Especificidad: 002*/
+form button {
+  align-self: center;
+  width: max-content;
+}
